@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - TechHub Store</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="brand">
+            <img src="imge/logo.jpg" class="logo" alt="TechHub Store Logo">
+            <span class="brand-name">HUBTECH STORE</span>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.htm">Trang chủ</a>
+                <a href="sanpham.html">Sản phẩm</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </nav>
+            <div class="cart-indicator" onclick="confirmPurchase()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCTS PAGE -->
+    <section class="products reveal">
+        <h2>Sản phẩm nổi bật</h2>
+
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="imge/100083.png" alt="RAM DDR4">
+                <h3>RAM DDR4 16GB</h3>
+                <p class="price">1.250.000₫</p>
+                <button onclick="buyProduct('RAM DDR4 16GB')">Mua hàng</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="imge/OIP.webp" alt="Mainboard">
+                <h3>Mainboard B660</h3>
+                <p class="price">2.890.000₫</p>
+                <button onclick="buyProduct('Mainboard B660')">Mua hàng</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="imge/rtx-3060-header.jpg" alt="Card đồ họa">
+                <h3>RTX 3060 12GB</h3>
+                <p class="price">6.900.000₫</p>
+                <button onclick="buyProduct('RTX 3060 12GB')">Mua hàng</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="imge/OIP (1).webp" alt="CPU Intel i5">
+                <h3>CPU Intel Core i5 Gen 12</h3>
+                <p class="price">4.500.000₫</p>
+                <button onclick="buyProduct('CPU Intel Core i5 Gen 12')">Mua hàng</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="imge/OIF.webp" alt="SSD NVMe">
+                <h3>SSD NVMe 1TB PCIe 4.0</h3>
+                <p class="price">2.150.000₫</p>
+                <button onclick="buyProduct('SSD NVMe 1TB PCIe 4.0')">Mua hàng</button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product">
+                <img src="imge/71HEQ9FBF9L._AC_SL1500_.jpg" alt="Nguồn máy tính">
+                <h3>PSU 650W 80 Plus Gold</h3>
+                <p class="price">1.690.000₫</p>
+                <button onclick="buyProduct('PSU 650W 80 Plus Gold')">Mua hàng</button>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product">
+                <img src="imge/840a8735c42e1452f4ac7f936a17060b.jpg" alt="Case Gaming">
+                <h3>Case Gaming RGB Kính Cường Lực</h3>
+                <p class="price">1.350.000₫</p>
+                <button onclick="buyProduct('Case Gaming RGB Kính Cường Lực')">Mua hàng</button>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product">
+                <img src="imge/thum-1600x1062.jpeg" alt="Màn hình 27 inch">
+                <h3>Màn hình 27" 2K 165Hz</h3>
+                <p class="price">5.900.000₫</p>
+                <button onclick="buyProduct('Màn hình 27 2K 165Hz')">Mua hàng</button>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product">
+                <img src="imge/a6e0442506ef30d7453c6bf83bb96dd4_bb7c1484-ca0e-4843-b9e7-3e7e28f7bd4b.webp" alt="Bàn phím cơ">
+                <h3>AM Cyberboard R4</h3>
+                <p class="price">20.169.000₫</p>
+                <button onclick="buyProduct('Bàn phím cơ RGB Switch Red')">Mua hàng</button>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product">
+                <img src="imge/OIP (2).webp" alt="Chuột gaming">
+                <h3>Chuột gaming không dây 2.4G</h3>
+                <p class="price">650.000₫</p>
+                <button onclick="buyProduct('Chuột gaming không dây 2.4G')">Mua hàng</button>
+            </div>
+            <!-- Product 11 -->
+            <div class="product">
+                <img src="imge/OIP (3).webp" alt="RAM DDR4">
+                <h3>RAM DDR4 8GB</h3>
+                <p class="price">690.000₫</p>
+                <button onclick="buyProduct('RAM DDR4 8GB')">Mua hàng</button>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product">
+                <img src="imge/OIP (4).webp" alt="Mainboard">
+                <h3>Mainboard H610</h3>
+                <p class="price">1.990.000₫</p>
+                <button onclick="buyProduct('Mainboard H610')">Mua hàng</button>
+            </div>
+
+            <!-- Product 13 -->
+            <div class="product">
+                <img src="imge/OIP (5).webp" alt="Card đồ họa">
+                <h3>GTX 1650 4GB</h3>
+                <p class="price">3.900.000₫</p>
+                <button onclick="buyProduct('GTX 1650 4GB')">Mua hàng</button>
+            </div>
+
+            <!-- Product 14 -->
+            <div class="product">
+                <img src="imge/e176f1ba-ban-phim-co-van-phong-1.jpg" alt="Bàn phím cơ">
+                <h3>Bàn phím văn phòng chống ồn</h3>
+                <p class="price">350.000₫</p>
+                <button onclick="buyProduct('Bàn phím văn phòng chống ồn')">Mua hàng</button>
+            </div>
+
+            <!-- Product 15 -->
+            <div class="product">
+                <img src="imge/OIP (6).webp" alt="Chuột văn phòng">
+                <h3>Chuột không dây văn phòng</h3>
+                <p class="price">280.000₫</p>
+                <button onclick="buyProduct('Chuột không dây văn phòng')">Mua hàng</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        2025 TechHub Store — All Rights Reserved
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

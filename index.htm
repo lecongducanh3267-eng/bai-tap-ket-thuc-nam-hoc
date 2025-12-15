@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub Store - Linh kiện máy tính</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="brand">
+            <img src="imge/logo.jpg" class="logo" alt="TechHub Store Logo">
+            <span class="brand-name">TECHHUB STORE</span>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.htm">Trang chủ</a>
+                <a href="sanpham.html">Sản phẩm</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </nav>
+            <div class="cart-indicator" onclick="confirmPurchase()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section id="home" class="banner reveal">
+        <h1>Chào mừng đến với TechHub Store</h1>
+        <p>Nơi bán linh kiện máy tính chất lượng – giá tốt nhất</p>
+        <button onclick="window.location.href='sanpham.html'">Xem sản phẩm</button>
+    </section>
+
+    <footer>
+        2025 TechHub Store — All Rights Reserved
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

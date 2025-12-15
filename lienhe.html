@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - TechHub Store</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <div class="brand">
+            <img src="imge/logo.jpg" class="logo" alt="TechHub Store Logo">
+            <span class="brand-name">HUBTECH STORE</span>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.htm">Trang chủ</a>
+                <a href="sanpham.html">Sản phẩm</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </nav>
+            <div class="cart-indicator" onclick="confirmPurchase()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+    <!-- CUSTOMER INFO FORM -->
+    <section class="customer-form reveal">
+        <div class="form-card">
+            <h2>THÔNG TIN KHÁCH HÀNG</h2>
+
+            <form id="customer-info-form">
+                <table class="form-table">
+                    <tr>
+                        <td><label for="cust-name">Tên:</label></td>
+                        <td><input type="text" id="cust-name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cust-email">Email:</label></td>
+                        <td><input type="email" id="cust-email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><span>Giới tính:</span></td>
+                        <td class="gender-row">
+                            Nam: <input type="radio" name="gender" value="Nam" required>
+                            &nbsp;&nbsp;
+                            Nữ: <input type="radio" name="gender" value="Nữ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cust-place">Nơi sinh:</label></td>
+                        <td>
+                            <select id="cust-place" name="place" required>
+                                <option value="">-- Chọn nơi sinh --</option>
+                                <option value="An Giang">An Giang</option>
+                                <option value="Ba Ria - Vung Tau">Bà Rịa - Vũng Tàu</option>
+                                <option value="Bac Giang">Bắc Giang</option>
+                                <option value="Bac Kan">Bắc Kạn</option>
+                                <option value="Bac Lieu">Bạc Liêu</option>
+                                <option value="Bac Ninh">Bắc Ninh</option>
+                                <option value="Ben Tre">Bến Tre</option>
+                                <option value="Binh Dinh">Bình Định</option>
+                                <option value="Binh Duong">Bình Dương</option>
+                                <option value="Binh Phuoc">Bình Phước</option>
+                                <option value="Binh Thuan">Bình Thuận</option>
+                                <option value="Ca Mau">Cà Mau</option>
+                                <option value="Cao Bang">Cao Bằng</option>
+                                <option value="Can Tho">Cần Thơ</option>
+                                <option value="Da Nang">Đà Nẵng</option>
+                                <option value="Dak Lak">Đắk Lắk</option>
+                                <option value="Dak Nong">Đắk Nông</option>
+                                <option value="Dien Bien">Điện Biên</option>
+                                <option value="Dong Nai">Đồng Nai</option>
+                                <option value="Dong Thap">Đồng Tháp</option>
+                                <option value="Gia Lai">Gia Lai</option>
+                                <option value="Ha Giang">Hà Giang</option>
+                                <option value="Ha Nam">Hà Nam</option>
+                                <option value="Ha Noi">Hà Nội</option>
+                                <option value="Ha Tinh">Hà Tĩnh</option>
+                                <option value="Hai Duong">Hải Dương</option>
+                                <option value="Hai Phong">Hải Phòng</option>
+                                <option value="Hau Giang">Hậu Giang</option>
+                                <option value="Hoa Binh">Hòa Bình</option>
+                                <option value="Hung Yen">Hưng Yên</option>
+                                <option value="Khanh Hoa">Khánh Hòa</option>
+                                <option value="Kien Giang">Kiên Giang</option>
+                                <option value="Kon Tum">Kon Tum</option>
+                                <option value="Lai Chau">Lai Châu</option>
+                                <option value="Lam Dong">Lâm Đồng</option>
+                                <option value="Lang Son">Lạng Sơn</option>
+                                <option value="Lao Cai">Lào Cai</option>
+                                <option value="Long An">Long An</option>
+                                <option value="Nam Dinh">Nam Định</option>
+                                <option value="Nghe An">Nghệ An</option>
+                                <option value="Ninh Binh">Ninh Bình</option>
+                                <option value="Ninh Thuan">Ninh Thuận</option>
+                                <option value="Phu Tho">Phú Thọ</option>
+                                <option value="Phu Yen">Phú Yên</option>
+                                <option value="Quang Binh">Quảng Bình</option>
+                                <option value="Quang Nam">Quảng Nam</option>
+                                <option value="Quang Ngai">Quảng Ngãi</option>
+                                <option value="Quang Ninh">Quảng Ninh</option>
+                                <option value="Quang Tri">Quảng Trị</option>
+                                <option value="Soc Trang">Sóc Trăng</option>
+                                <option value="Son La">Sơn La</option>
+                                <option value="Tay Ninh">Tây Ninh</option>
+                                <option value="Thai Binh">Thái Bình</option>
+                                <option value="Thai Nguyen">Thái Nguyên</option>
+                                <option value="Thanh Hoa">Thanh Hóa</option>
+                                <option value="Thua Thien Hue">Thừa Thiên Huế</option>
+                                <option value="Tien Giang">Tiền Giang</option>
+                                <option value="TP Ho Chi Minh">TP. Hồ Chí Minh</option>
+                                <option value="Tra Vinh">Trà Vinh</option>
+                                <option value="Tuyen Quang">Tuyên Quang</option>
+                                <option value="Vinh Long">Vĩnh Long</option>
+                                <option value="Vinh Phuc">Vĩnh Phúc</option>
+                                <option value="Yen Bai">Yên Bái</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cust-note">Nội dung:</label></td>
+                        <td><textarea id="cust-note" name="note" rows="3"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="form-actions-row">
+                            <button type="submit">Gửi</button>
+                            <button type="reset">Nhập lại</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section class="contact reveal">
+        <div>
+            <h2>Liên hệ</h2>
+            <p>Email: <a href="mailto:support@techhub.vn"></a>support@techhub.vn</a></p>
+            <p>SĐT: 0123 456 789</p>
+            <p>Địa chỉ: 123 Đường 30/4, Phường 11, TP. VT</p>
+        </div>
+    </section>
+
+    <footer>
+        2025 TechHub Store — All Rights Reserved
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
